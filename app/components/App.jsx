@@ -2,6 +2,7 @@ import React from 'react';
 import uuid from 'uuid';
 import Notes from './Notes';
 import connect from '../libs/connect';
+import NoteActions from '../actions/NoteActions';
 
 export default class App extends React.Component {
   render() {
@@ -71,4 +72,6 @@ export default class App extends React.Component {
 
 export default connect(({notes}) => ({
   notes
-}))(App)
+}),{
+  NoteActions
+})(App)
