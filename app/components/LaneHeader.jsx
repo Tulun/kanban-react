@@ -27,7 +27,7 @@ export default connect(() => ({}), {
   return (
     <div className='lane-header' {...props}>
       <div className='lane-add-note'>
-        <button onClick{addNote}>+</button>
+        <button onClick={addNote}>+</button>
       </div>
       <div className='lane-name'>{lane.name}</div>
     </div>
