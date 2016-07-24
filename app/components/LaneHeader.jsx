@@ -40,6 +40,13 @@ export default connect(() => ({}), {
     });
   };
 
+  const deleteLane = e => {
+    // Avoid bubbling to edit.
+    e.stopPropagation();
+
+    LaneActions.delete(lane.id);
+  };
+
   return (
     <div className='lane-header' onClick={activeLaneEdit} {...props}>
       <div className='lane-add-note'>
@@ -47,6 +54,9 @@ export default connect(() => ({}), {
       </div>
       <Editable className='lane-name' editing={lane.editing}
        value={lane.name} onEdit={editName} />
+      <div className='lane-delete'>
+        <button onClick={deleteLane}>x</button>
+      </div>
     </div>
   );
 })
