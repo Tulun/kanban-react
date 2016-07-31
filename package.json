@@ -61,7 +61,8 @@
     "alt-container": "^1.0.2",
     "alt-utils": "^1.0.0",
     "classnames": "^2.2.5",
-    "react": "^15.1.0",
+    "react": "^15.2.1",
+    "react-addons-update": "^15.3.0",
     "react-dom": "^15.1.0"
   }
 }
